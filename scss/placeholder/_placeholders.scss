@@ -1,0 +1,30 @@
+%titre-global{
+    font-family: comfortaa,sans-serif;
+    text-align: center;
+    font-size: 70px;
+    padding: 0 25px 20px;
+}
+
+%flex-double-centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px){
+   %titre-global{
+        font-size: 60px;
+   }
+}
+@media screen and (max-width: 850px){
+   %titre-global{
+        font-size: 50px;
+   }
+}
+@media screen and (max-width: 600px){
+   %titre-global{
+        font-size: 35px;
+        padding: 10px 5px;
+   }
+}
+

@@ -1,0 +1,170 @@
+.titre-tarifs {
+    padding: 120px 0 20px;
+}
+
+.container-tarifs {
+    margin: 125px auto 200px;
+    width: 60%;
+    max-width: 1100px;
+    min-width: 300px;
+    height: auto;
+}
+
+.choix-tarifs {
+    margin: 0 auto;
+    height: 100px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.choix {
+    font-family: Comfortaa, sans-serif;
+    height: 100%;
+    width: 170px;
+    outline: none;
+    border: none;
+    @extend %flex-double-centre;
+    font-size: 30px;
+    letter-spacing: 3px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.choix:nth-child(1) {
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid #fff;
+}
+
+.choix:nth-child(2) {
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid #fff;
+}
+
+.choix:nth-child(3) {
+    box-shadow: 5px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.choix.active-choix {
+    background: #fff;
+    color: #000;
+}
+
+// Tableau 
+
+.tableau {
+    border-collapse: collapse;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #000;
+    background-image: linear-gradient(45deg,
+            rgba(251, 247, 230, 0.53) 0%,
+            rgba(251, 247, 230, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 71.42999999999999%,
+            rgba(122, 231, 255, 0.53) 71.43%,
+            rgba(122, 231, 255, 0.53) 85.71600000000001%,
+            rgba(144, 224, 246, 0.53) 85.716%,
+            rgba(144, 224, 246, 0.53) 100.002%),
+        linear-gradient(135deg,
+            rgb(248, 144, 216) 0%,
+            rgb(248, 144, 216) 12.5%,
+            rgb(255, 161, 235) 12.5%,
+            rgb(255, 161, 235) 25%,
+            rgb(246, 167, 241) 25%,
+            rgb(246, 167, 241) 37.5%,
+            rgb(242, 184, 251) 37.5%,
+            rgb(242, 184, 251) 50%,
+            rgb(224, 183, 246) 50%,
+            rgb(224, 183, 246) 62.5%,
+            rgb(212, 183, 253) 62.5%,
+            rgb(212, 183, 253) 75%,
+            rgb(161, 146, 251) 75%,
+            rgb(161, 146, 251) 87.5%,
+            rgb(147, 159, 248) 87.5%,
+            rgb(147, 159, 248) 100%);
+}
+
+th {
+    font-size: 40px;
+}
+
+td,
+th {
+    border: 1px solid #222;
+    padding: 8px;
+    // centrer dans un tableau vertical
+    vertical-align: middle;
+    width: 50%;
+}
+
+td {
+    padding-left: 15px;
+}
+
+.panneau {
+    display: none;
+}
+
+.panneau-active {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-tarifs {
+        width: 90%;
+        margin: 55px auto 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-tarifs {
+        width: 95%;
+    }
+
+    .choix-tarifs {
+        height: 100px;
+    }
+
+    .choix {
+        width: 150px;
+        font-size: 25px;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .container-tarifs {
+        width: 300px;
+    }
+
+    .choix-tarifs {
+        height: 75px;
+    }
+
+    .choix {
+        width: 100px;
+        font-size: 18px;
+    }
+
+    .tableau {
+        height: 500px;
+        font-size: 22px;
+    }
+
+    th {
+        font-size: 30px;
+    }
+}

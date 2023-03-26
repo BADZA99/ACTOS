@@ -1,0 +1,545 @@
+body{
+   
+    font-family: 'Roboto',Arial, Helvetica, sans-serif sans-serif;
+    min-height: 100vh; 
+}
+
+// ------------------Navigation--------------------
+
+nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-nav{
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    @extend %flex-double-centre;
+}
+
+nav li {
+    margin: 0 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    list-style-type: none;
+    position: relative;
+    text-decoration: none;
+    top: 5px;
+    background: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.logo-nav{
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.lien-essai{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+    background: linear-gradient(45deg,$violet-principale, rgb(50,151,168));
+}
+
+.responsive-nav-btn{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+@media screen and (max-width: 950px){
+    .responsive-nav-btn{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        top: -5px;
+        border-bottom: 1px solid #000;
+        align-items: center;
+        background: #fff;
+    }
+
+    nav ul{
+        width: 100%;
+        background:#fff;
+        flex-direction: column;
+        border-bottom: 1px solid #000;
+        display: none;
+    }
+
+    .logo-nav{
+        padding-left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    nav ul li{
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .lien-essai{
+        display: none;
+    }
+
+    .active-nav{
+        display: flex;
+    }
+       
+}
+
+// container globale 
+
+.container-globale{
+    padding-bottom: 400px;
+}
+
+.acceuil{
+    width:100%;
+    height: 900px;
+    @extend %flex-double-centre;
+    flex-direction: column;
+    padding: 50px 0 75px;
+}
+
+.titre-global{
+   @extend %titre-global; 
+}
+
+.sous-titre{
+    font-size: 30px;
+    line-height: 1.2;
+    padding-bottom:20px;
+    text-align: center;
+}
+
+.acceuil img{
+    width:1000px;
+}
+
+@media screen and (max-width: 1100px){
+    .acceuil {
+       padding: 0 0 0;
+       height: 700px;
+    }
+
+    .acceuil img{
+        width: 700px;
+    }
+
+    .sous-titre{
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .acceuil {
+        padding: 100px 0 0px;
+    }
+
+   
+}
+
+@media screen and (max-width: 750px){
+    .acceuil {
+       padding: 100px  0 0px;
+       height: 500px;
+    }
+
+    .acceuil img{
+        width: 500px;
+    }
+
+    .sous-titre{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .acceuil {
+        padding: 75px 0 0px;
+        height: 400px;
+    }
+
+    .acceuil img{
+        width: 400px;
+    }
+
+    .sous-titre{
+        font-size: 18px;
+    }
+
+
+}
+
+@media screen and (max-width: 450px) {
+    .acceuil img{
+        width: 320px;
+    }
+   
+}
+
+// PERFORMANCES
+
+.container-performances{
+    padding: 120px 20px 170px;
+    margin-bottom: 100px;
+    background-image: linear-gradient(45deg,
+                rgba(251, 247, 230, 0.53) 0%,
+                rgba(251, 247, 230, 0.53) 14.286%,
+                rgba(245, 255, 242, 0.53) 14.286%,
+                rgba(245, 255, 242, 0.53) 28.572%,
+                rgba(243, 255, 252, 0.53) 28.572%,
+                rgba(243, 255, 252, 0.53) 42.858%,
+                rgba(209, 254, 255, 0.53) 42.858%,
+                rgba(209, 254, 255, 0.53) 57.144%,
+                rgba(157, 242, 255, 0.53) 57.144%,
+                rgba(157, 242, 255, 0.53) 71.42999999999999%,
+                rgba(122, 231, 255, 0.53) 71.43%,
+                rgba(122, 231, 255, 0.53) 85.71600000000001%,
+                rgba(144, 224, 246, 0.53) 85.716%,
+                rgba(144, 224, 246, 0.53) 100.002%),
+            linear-gradient(135deg,
+                rgb(248, 144, 216) 0%,
+                rgb(248, 144, 216) 12.5%,
+                rgb(255, 161, 235) 12.5%,
+                rgb(255, 161, 235) 25%,
+                rgb(246, 167, 241) 25%,
+                rgb(246, 167, 241) 37.5%,
+                rgb(242, 184, 251) 37.5%,
+                rgb(242, 184, 251) 50%,
+                rgb(224, 183, 246) 50%,
+                rgb(224, 183, 246) 62.5%,
+                rgb(212, 183, 253) 62.5%,
+                rgb(212, 183, 253) 75%,
+                rgb(161, 146, 251) 75%,
+                rgb(161, 146, 251) 87.5%,
+                rgb(147, 159, 248) 87.5%,
+                rgb(147, 159, 248) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+
+}
+
+.separation{
+    margin: 0 auto 70px;
+    height: 2px;
+    width: 300px;
+    border-radius: 3px;
+    background: #000;
+    border: none;
+}
+
+
+.container-boxs{
+    @extend %flex-double-centre;
+    width: 100%;
+}
+
+.box{
+    margin:0 50px;
+}
+
+.box p{
+    text-align: center;
+}
+
+.nombre-clients{
+    font-size: 85px;
+    padding-bottom: 10px;
+}
+
+.type-de-clients{
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    // line-height: 1.2;
+}
+
+.info-clients{
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+
+@media screen and (max-width: 1000px){
+    
+
+    .nombre-clients{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 750px){
+    .container-performances{
+        padding: 175px 20px 150px;
+    }
+
+    .container-boxs{
+        flex-direction: column;
+    }
+
+    .box{
+        margin: 20px 0;
+    }
+
+    .separation{
+        margin: 0 auto 30px;
+        width: 30%;
+    }
+
+    .nombre-clients{
+        font-size: 80px;
+    }
+
+    .type-de-clients{
+        font-size: 25px;
+    }
+
+    .info-clients{
+        font-size: 22px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .container-performances{
+        padding: 135px 20px 150px;
+    }
+
+    .nombre-clients {
+        font-size: 50px;
+    }
+
+    .type-de-clients {
+        font-size: 22px;
+    }
+
+    .info-clients {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+
+// FAQ
+
+.container-faq{
+    width: 70%;
+    max-width:900px;
+    min-width: 300px;
+    height: auto;
+    margin: 10px auto 150px;
+    @extend %flex-double-centre;
+    flex-direction: column;
+}
+
+.questions{
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.panneau-visible{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.titre-question{
+    margin-left: 10px;
+    padding: 15px 5px;
+    font-size: 30px;
+}
+
+.panneau-visible img {
+    margin-right:10px ;
+    width: 25px;
+    cursor: pointer;
+}
+
+.toggle-pannel{
+    padding: 0 15px;
+    height: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.toggle-pannel h4{
+    font-size: 22px;
+    padding-bottom: 10px ;
+}
+.toggle-pannel p{
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 10px ;
+}
+
+@media screen and (max-width: 750px){
+    .container-faq{
+        width: 90px;
+    }
+
+    .titre-question{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+}
+
+// appel a l'action 
+
+.container-cta{
+    padding: 150px 0 100px;
+    background-image: linear-gradient(45deg,
+                rgba(251, 247, 230, 0.53) 0%,
+                rgba(251, 247, 230, 0.53) 14.286%,
+                rgba(245, 255, 242, 0.53) 14.286%,
+                rgba(245, 255, 242, 0.53) 28.572%,
+                rgba(243, 255, 252, 0.53) 28.572%,
+                rgba(243, 255, 252, 0.53) 42.858%,
+                rgba(209, 254, 255, 0.53) 42.858%,
+                rgba(209, 254, 255, 0.53) 57.144%,
+                rgba(157, 242, 255, 0.53) 57.144%,
+                rgba(157, 242, 255, 0.53) 71.42999999999999%,
+                rgba(122, 231, 255, 0.53) 71.43%,
+                rgba(122, 231, 255, 0.53) 85.71600000000001%,
+                rgba(144, 224, 246, 0.53) 85.716%,
+                rgba(144, 224, 246, 0.53) 100.002%),
+            linear-gradient(135deg,
+                rgb(248, 144, 216) 0%,
+                rgb(248, 144, 216) 12.5%,
+                rgb(255, 161, 235) 12.5%,
+                rgb(255, 161, 235) 25%,
+                rgb(246, 167, 241) 25%,
+                rgb(246, 167, 241) 37.5%,
+                rgb(242, 184, 251) 37.5%,
+                rgb(242, 184, 251) 50%,
+                rgb(224, 183, 246) 50%,
+                rgb(224, 183, 246) 62.5%,
+                rgb(212, 183, 253) 62.5%,
+                rgb(212, 183, 253) 75%,
+                rgb(161, 146, 251) 75%,
+                rgb(161, 146, 251) 87.5%,
+                rgb(147, 159, 248) 87.5%,
+                rgb(147, 159, 248) 100%);
+    clip-path: polygon(0 17%, 100% 0%, 100% 82%, 0 100%);
+}
+
+.txt-cta{
+    text-align: center;
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.btn-appel{
+    display: block;
+    color: #f1f1f1;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    margin:30px auto ;
+    width: 250px;
+    padding: 20px;
+    border-radius: 9999px;
+    background: $violet-principale;
+}
+
+@media screen and (max-width: 750px){
+
+    .txt-cta{
+        font-size: 18px;
+    }
+
+    .btn-appel{
+
+        width: 200px;
+        
+    }
+}
+
+// footer
+
+footer{
+    // position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    border-top: 1px dashed #000;
+    background: #f1f1f1;
+    color:#333;
+    @extend %flex-double-centre;
+    flex-direction: column;
+}
+
+.bloc{
+    width: 300px;
+   margin: 0 30px;
+}
+
+footer h3{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.liste-media{
+    @extend %flex-double-centre;
+}
+
+.liste-media img{
+    width:40px ;
+    margin: 10px 10px;
+}
+
+
+    
+

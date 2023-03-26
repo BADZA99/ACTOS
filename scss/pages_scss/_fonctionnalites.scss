@@ -1,0 +1,227 @@
+// -----------------------acceuil---------------------------
+
+.titre-fonctionnalites{
+    padding: 130px 0 20px;
+}
+
+.sous-titre-fonctionnalites{
+    text-align: center;
+    font-size: 24px;
+}
+
+.container-btn-acceuil{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-fonctionnalites{
+    display: block;
+    width: 200px;
+    padding: 15px;
+    background: $violet-principale;
+    color: #fff;
+    text-align: center;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.fantome{
+    border: 2px solid $violet-principale;
+    background: transparent;
+    color: $violet-principale;
+}
+
+// fonctionnalites
+
+// -----------------------fonctionnalites---------------------------
+
+.container-fonctionnalites{
+    margin: 125px auto 200px;
+    width: 90%;
+    max-width: 1700px;
+    min-width: 300px;
+    @extend %flex-double-centre;
+    flex-wrap: wrap;
+}
+
+.box-fonctionnalites{
+    width: 400px;
+    display: flex;
+    margin: 40px 20px;
+}
+
+.gauche-img{
+    font-size: 50px;
+}
+
+.droite-txt p:nth-of-type(1){
+    font-size: 35px;
+    font-weight: 600;
+}
+.droite-txt p:nth-of-type(2){
+    font-size: 35px;
+    line-height:1.2 ;
+}
+
+@media screen and (max-width:800px) {
+    .container-fonctionnalites{
+        margin: 125px auto 75px;
+    }
+}
+
+
+// newsletter
+
+.sous-titre-newsletter{
+    font-size: 27px;
+    text-align: center;
+    padding: 0 0 20px;
+}
+
+form{
+    width: 50%;
+    margin:0 auto 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+form input{
+    width: 100%;
+    padding: 19px;
+    font-style: 20px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 9999px;
+}
+
+form button{
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    // height: 25px;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 9999px;
+}
+
+@media screen and (max-width:600px) {
+    .sous-titre-newsletter{
+        font-size: 20px;
+    }
+
+    form button {
+        width: 125px;
+        
+    }
+
+    form input {
+        font-style: 17px;
+       
+    }
+
+
+}
+@media screen and (max-width:1100px) {
+   form{
+         width: 80%;
+   }
+}
+
+
+// nos produits
+
+
+.galerie-txt-pics {
+    width: 1300px;
+    margin: 0 auto;
+    @extend %flex-double-centre;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+}
+
+.txt-box-galerie {
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.txt-box-galerie p:nth-child(1) {
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 0 0 20px 0;
+}
+
+.underline-violet {
+    width: 200px;
+    height: 3px;
+    background: $violet-principale;
+    border: none;
+    margin: 0;
+}
+
+.txt-box-galerie p:nth-child(3) {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.txt-box-galerie p:nth-child(4) {
+    font-size: 30px;
+    padding: 0px 0 20px;
+}
+
+.txt-box-galerie a {
+    color: #000;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.img-box-galerie {
+    border: 1px solid #000;
+    width: 500px;
+    height: 500px;
+    background: url(../../ressources/img-galerie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .galerie-txt-pics {
+        width: 90%;
+    }
+
+    .txt-box-galerie {
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .galerie-txt-pics {
+        margin-bottom: 100px;
+    }
+
+    .txt-box-galerie p:nth-child(1) {
+        font-size: 35px;
+    }
+
+    .img-box-galerie {
+        margin: 5px
+    }
+
+    .txt-box-galerie {
+        margin: 5px
+    }
+
+}

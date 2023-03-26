@@ -1,0 +1,8 @@
+@mixin absolute-el($top,$right,$bottom,$left,$x,$y){
+    position: absolute;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+    transform: translate($x,$y);
+}
